@@ -1,0 +1,1709 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (136.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (117.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+Migrating to CreateUsers (20200315214441)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_number" varchar, "encrypted_password" varchar, "salt" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200315214441_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200315214441"]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (112.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-03-15 21:46:19.661012"], ["updated_at", "2020-03-15 21:46:19.661012"]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (83.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "encrypted_password", "salt", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Deep"], ["last_name", "L"], ["username", "deep"], ["email", "d@g.com"], ["encrypted_password", "$2a$12$OYA4D0UJLr/dIQfZelNo8.CImPZGHfrtXS4qMFJSK8UT0kjzmghL."], ["salt", "$2a$12$OYA4D0UJLr/dIQfZelNo8."], ["created_at", "2020-03-16 20:07:51.441565"], ["updated_at", "2020-03-16 20:07:51.441565"]]
+  [1m[35m (75.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+Migrating to CreateUsers (20200315214441)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200315214441"]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (84.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+Migrating to CreateUsers (20200315214441)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200315214441_create_users.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "email" varchar, "mobile_number" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200315214441_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200315214441"]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (161.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/bin/rake:23
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/sprites.self-556e1741ff6d22f63fe0be609679c8f06ffc45eabc31836b6b785475bb283b84.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.4.1) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.4.1) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-03-17 23:11:59 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/deepali/.rvm/gems/ruby-2.6.2/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/deepali/.rvm/gems/ruby-2.6.2/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (8.6ms)
+Completed 200 OK in 38ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:23:20 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:26:01 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:26:50 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:31:49 +0530
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `block in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:8:in `without_bootsnap_cache'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:79:in `rescue in load_missing_constant'
+bootsnap (1.4.5) lib/bootsnap/load_path_cache/core_ext/active_support.rb:58:in `load_missing_constant'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.4.1) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.4.1) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:32:42 +0530
+  
+SyntaxError (/home/deepali/deepali/documents/projects/customer_api/app/controllers/users_controller.rb:7: syntax error, unexpected '}', expecting =>
+...   render json: {@user.to_json}, status: 200
+...                              ^
+/home/deepali/deepali/documents/projects/customer_api/app/controllers/users_controller.rb:16: syntax error, unexpected '}', expecting =>
+...   render json: {@user.to_json}, status: 200
+...                              ^):
+  
+app/controllers/users_controller.rb:7: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:16: syntax error, unexpected '}', expecting =>
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:33:23 +0530
+  
+SyntaxError (/home/deepali/deepali/documents/projects/customer_api/app/controllers/users_controller.rb:7: syntax error, unexpected '}', expecting =>
+...   render json: {@user.to_json}, status: 200
+...                              ^):
+  
+app/controllers/users_controller.rb:7: syntax error, unexpected '}', expecting =>
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:33:43 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"_json"=>nil, "user"=>{}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:34:54 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Deep", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Deep", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:211:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:243:in `handle_unverified_request'
+actionpack (5.2.4.1) lib/action_controller/metal/request_forgery_protection.rb:238:in `verify_authenticity_token'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.4) lib/puma/configuration.rb:227:in `call'
+puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
+puma (3.12.4) lib/puma/server.rb:476:in `process_client'
+puma (3.12.4) lib/puma/server.rb:334:in `block in run'
+puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:35:41 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Deep", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Deep", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:36:41 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Deep", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Deep", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 5285ms (Views: 0.3ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:36:59 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Deep", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Deep", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 22655ms (Views: 0.4ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:49:59 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Dee", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 24526ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:53:36 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Dee", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 119944ms (Views: 0.6ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-17 23:56:40 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "user"=>{"first_name"=>"Dee", "last_name"=>"L", "username"=>"deep", "email"=>"d@g.com", "mobile_number"=>"8787878787"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 456872ms (Views: 0.7ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:04:17 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"{\"first_name\":\"Dee\",\"last_name\":\"L\",\"mobile_number\":\"8787878787\",\"username\":\"deep\",\"email\":\"d@g.com\",\"password\":\"1234\",\"password_confirmation\":\"1234\"}"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x00007fdb60156c40>):
+  
+app/controllers/users_controller.rb:25:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:04:49 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 8919ms (Views: 0.7ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:05:19 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 52933ms (Views: 0.4ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:07:07 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Dee", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 37556ms (Views: 0.8ms | ActiveRecord: 4.6ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.c"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.c"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:14:14 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Deep", "last_name"=>"L", "mobile_number"=>"8787878787", "username"=>"deep", "email"=>"d@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity.
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "mobile_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Deep"], ["last_name", "L"], ["username", "deep"], ["email", "d@g.com"], ["mobile_number", "8787878787"], ["password_digest", "$2a$12$ZEaz78yaUnsav5E6ojqfQ.VzcCXF.roQiKv2m.V.ndCYTT6mb2gt6"], ["created_at", "2020-03-17 18:44:20.115083"], ["updated_at", "2020-03-17 18:44:20.115083"]]
+  ↳ (byebug):1
+  [1m[35m (131.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "deep"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "d@g.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 200 OK in 9854ms (Views: 0.5ms | ActiveRecord: 137.5ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:21:24 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcGwiLCJlbWFpbCI6ImRkQGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMjMiLCJleHAiOjE1ODQ0NzgyODR9.9RE9Isf5cvCzK7EQ1PmKSlTMCLwqCo5APn31ZktDLEI"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x00007f654c0db408>):
+  
+app/controllers/users_controller.rb:25:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:23:12 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcGwiLCJlbWFpbCI6ImRkQGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMjMiLCJleHAiOjE1ODQ0NzgzOTJ9.cfGdXHiuUdycktHHgTz7RZsBikBwc5WKGY9CWOnu7Mg"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 182900ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x00007f654c0484f0>):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:26:44 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcDEiLCJlbWFpbCI6ImhkQGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMjMiLCJleHAiOjE1ODQ0Nzg2MDR9.YN4nbygbZoxRQ366wiUlntGEWpGRtE1xaubkEju7p1E"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 26915ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x00007f654c1544c0>):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:27:29 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcDEiLCJlbWFpbCI6ImRAZy5jb20iLCJwYXNzd29yZCI6IjEiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxIiwiZXhwIjoxNTg0NDc4NjQ5fQ.m5LYaj4e5_3m5nQ33CL-BO-y1E6jbWeSuTya2mRV5G8"}
+Can't verify CSRF token authenticity.
+Completed 400 Bad Request in 96193ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: user):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:29:25 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMiIsImV4cCI6MTU4NDQ3ODc2NX0.fEzY0JUXu5l6aEp1NwrOMwPZ0QLw2xyhmDRUQAPmMMg"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 5312ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `permit' for #<String:0x00007f653c7449a8>):
+  
+app/controllers/users_controller.rb:24:in `user_params'
+app/controllers/users_controller.rb:4:in `create'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:30:12 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMiIsImV4cCI6MTU4NDQ3ODgxMn0.vHXowO9yayVnhWgiDYS_NRprLhtRX66PgRCyV9FR2Sk"}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (class or module required for rescue clause):
+  
+lib/json_web_token.rb:11:in `rescue in decode'
+lib/json_web_token.rb:8:in `decode'
+app/controllers/api_controller.rb:6:in `block in decrypt_params'
+app/controllers/api_controller.rb:6:in `decrypt_params'
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:32:06 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcGwiLCJlbWFpbCI6ImRAZy5jb20iLCJwYXNzd29yZCI6IjEiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxIiwiZXhwIjoxNTg0NDc4OTI2fQ.4QuGnRjTYDt0u3ZUVZ43LvhoCklm98Yg1dOB2o3s_UI"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deepl"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 400 Bad Request in 337ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:32:44 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0Nzg5NjR9.dPTJzZp_BEzqIDoHokN7RN3txnyLjy6E-EH402nYJLk"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 400 Bad Request in 348ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:33:20 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0Nzg5OTl9.r62wnm8-EnhmapTT-2sXnGyacK0BTSmRwpanR50nXvQ"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ (byebug):1
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (byebug):1
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:6
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 400 Bad Request in 106381ms (Views: 0.9ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:36:42 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0NzkyMDJ9.SIhD_-LvCvR3j7uNn-kZOVB-HWWtC9kSGmgVibnkvkc"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 400 Bad Request in 348ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:36:54 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0NzkyMDJ9.SIhD_-LvCvR3j7uNn-kZOVB-HWWtC9kSGmgVibnkvkc"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 400 Bad Request in 357ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:38:16 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0NzkyOTZ9.AXdf6IwCD6IrVGDswmzevHkS1sQz7Y_TDbJvOVaLuz0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 349ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:44:05 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIzIiwicGFzc3dvcmRfY29uZmlybWF0aW9uIjoiMTIzIiwiZXhwIjoxNTg0NDc5NjQ1fQ.8OKwfO8f8tk6njEn4xj0J1ui20Pdw4d58TNLMfX1RcM"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 402ms (Views: 0.3ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:45:49 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMiIsImV4cCI6MTU4NDQ3OTc0OX0.OMljD-Brt4bwROMRtprBxzsg65QF55qULXOX_bNlmmQ"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 332ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:47:45 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMiIsImV4cCI6MTU4NDQ3OTg2NX0.P5dFOZkp4_2-q-ZdX74BEX9i0In2_FXKxmxWaVxIdyU"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 332ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:48:32 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcCIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMTIiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMiIsImV4cCI6MTU4NDQ3OTkxMn0.LMA3TSWB6hMyc_21impZjwEOBDr4pVZz0UW6wy0KMxE"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 333ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 00:50:12 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiODc4Nzg3ODc4NyIsInVzZXJuYW1lIjoiZGVlcDEiLCJlbWFpbCI6ImRkQGcuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMjMiLCJleHAiOjE1ODQ0ODAwMTJ9.8i_lmEzlc_SvboT3nZKZDT4LMJKmc7hEWr4qZryF158"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dd@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "mobile_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Deep"], ["last_name", "L"], ["username", "deep1"], ["email", "dd@g.com"], ["mobile_number", "8787878787"], ["password_digest", "$2a$12$XzTfTUJUWUCZIwO5OCp0lODLM65NLtKT0X.azDE1Ihs9pCUUQ1CtW"], ["created_at", "2020-03-17 19:20:12.581520"], ["updated_at", "2020-03-17 19:20:12.581520"]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (74.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 403ms (Views: 0.6ms | ActiveRecord: 75.1ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:03:24 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODA4MDR9.qTMegJH9rcxzBnq8Ky33vkfxEH0y5gQQgrMeFQNURBs"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:04:15 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODA4NTV9.G36qh7SdoXiYvi1Vu2Egj63zFrx4GM0sgQqLlAAau9o"}
+Can't verify CSRF token authenticity.
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 29624ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:18:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:05:02 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODA5MDJ9.J4-Nj7WfDqVFsu7grgJaGL47sstIsIpBz-Riq5kOi8c"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Unpermitted parameter: :exp
+Completed 200 OK in 275289ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:09:37 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODExNzJ9.1YGdteM4z-iMDbf36P_sbcEKhz6vNvqT0sOjQW6bY5s"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 1251ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:15:06 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE1MDZ9.Tpjpjqu4wOoi6WHFzBJIelPf-0domUkprhqYdCOq5BE"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 500 Internal Server Error in 332ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/users_controller.rb:27:in `encrypt_payload'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:15:12 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE1MTJ9.4nEYd3dil7fFbSc0cF1bIi3a6RrKwQNBHxvOk2Di_7U"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 500 Internal Server Error in 331ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/users_controller.rb:27:in `encrypt_payload'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:15:19 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAiLCJwYXNzd29yZCI6IjEyMyIsImV4cCI6MTU4NDQ4MTUxOX0.E6qYzN1Rhvifsw-qonSSWk-8sVIJDKly4irDuQxqzkw"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 500 Internal Server Error in 324ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1)):
+  
+app/controllers/users_controller.rb:27:in `encrypt_payload'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:16:04 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAiLCJwYXNzd29yZCI6IjEyMyIsImV4cCI6MTU4NDQ4MTU2NH0.3YKXgK5puB55Ly4-0IrCADSe3baH2uewmJKsgt8vRq0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 333ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:17:49 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE2Njl9.vWwGEVzvWn-SUiA_B-mvUbCeyEW0Sgaof7xDkhTNmVU"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 323ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:18:09 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE2ODl9.byb0MLhqP2uhdZ4ZgJsgwKBftZbwNroVdULS6hr8cQ0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 339ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:19:28 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE3Njh9.wUP5zxQi1jiLYX_AaYAHQ7HnoEfLQP66cU0zhksy16Y"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 330ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:21:35 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE4OTV9.SuL1wjAF9MuLQVBBQ6dfmZ6lG7ttNr-OzcP5Qk6nQC4"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 41414ms (Views: 0.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:22:27 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODE5NDd9.1xxbdap7RCHsBJQf0mTpbq9SpfLPIoRv3jhCWhi1cY4"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 106631ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:24:14 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODIwNDl9.oEmP99il9ZSJADdN0cmywGXIx3Ja7j8F3GDImPTKuH4"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 12984ms (Views: 1.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:25:15 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODIxMTV9.-fNyqi-N4vobMuN2G0ouxjVYR_yN0rUjF8egCCAE4vk"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 46790ms (Views: 1.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:27:24 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODIyNDR9.Viuu3GpHFK2rUg7j3XcONyZE_D12cXima5H34I4Bme0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 392ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:28:45 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODIzMjV9.9cFj4pgFITxdnD9g695ouCvHMSiEBw12ZrgqSg-O2LM"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 21901ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:30:10 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODI0MTB9.tnsQRgYNG4mK-TkYk_7-l7Hb8rD9qm5LPnTFYL5DkeU"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 378ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:34:27 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODI2Njd9.HTP3MVFUffX_e2kKBPv3OnqbXr8Wyy3zwXbpaKQ8oks"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 332ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:36:49 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODI4MDl9.VXO0C0bFehRSWee0T-BtyVswNSA71VGfZ24v-hPdvWg"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 352ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:37:22 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODI4NDJ9.1jPs5YM_Gsb-n9dQlaDHDYRfmPUYULwrnOyTs8qkdKI"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 333ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:41:04 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODMwNjR9.nk43w6GeuhStNRHRMuZ8xYXuzO0APg6fK6aPjmLRUqc"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 334ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:42:09 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODMxMjl9.4Ir8tV4NEapumzlmdR0LiOjghb3NggVPgH5gJ6D45Uo"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 344ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:42:15 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODMxMzV9.gIilMaFbqAD-YObaneRT7vm8NdLRHl3SN8_ZiOO0IZ0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 381ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:43:51 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODMyMzF9.J7w-0wfVrYX99fzcsMIAeAQaR920kz6lyWGzT_QUjUA"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 408ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:44:02 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODMyNDJ9.KX0b6CH-yD5FG7aHRSDaLwm2Vcaq76KT44WUkA7eEdo"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 325ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:48:40 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDgzNTIwfQ.F0BrHQyl25C9rbENoTqlbPQKBvPfky-WMXSkhItdTzw"}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :id, :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:49:24 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDgzNTY0fQ.-zqNuY9be0K8pBXp21W1mjTkQV4fsqcwJ85CTAf6mMs"}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :id, :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:49:44 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDgzNTg0fQ.4GZC9CV_iG3B5ufLHi39GQvKKzFd8NskbxYbtlI8HPo"}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :id, :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:50:01 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDgzNjAxfQ.BYj5rfeqFeLXtrGhgZz_YoMe1KY4A11UZK8x6y9YXZc"}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :id, :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.1ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 01:51:14 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDgzNjc0fQ.qQQpAz6B-nWwvT8BKbU0ewLbJAyQBEyXjFbmDFf9qRQ"}
+Can't verify CSRF token authenticity.
+Unpermitted parameters: :id, :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `errors' for nil:NilClass):
+  
+app/controllers/users_controller.rb:17:in `authenticate_user'
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:02:21 +0530
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODQzNDF9.7rZ1TZIsFMcJAI5kD3cZC6byVlyuWDF4Guwa2gD735U"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 339ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:03:08 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODQzODh9.A0kxmItowxj8miLwlQTWz60WTT4F2J3qVXylUXqTncI"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 318ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:03:24 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODQ0MDR9.BUDr-ijk8yhiaMaA_KHg98iBYzUPv6bVg4zVPPQWdRk"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 323ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:03:52 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODQ0MzJ9.esZRjOZPjE1kCYKsbb5niS6e10OAexk5ygENbEqzvM0"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 318ms (Views: 0.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg0NzI0fQ.ftEJ54_WOdkxTS5RhZHCxH7UU4hxYtnObyDnI_FfgXM" for 127.0.0.1 at 2020-03-18 02:12:37 +0530
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/deepali/.rvm/gems/ruby-2.6.2/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg0NzI0fQ.ftEJ54_WOdkxTS5RhZHCxH7UU4hxYtnObyDnI_FfgXM"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg0OTc2fQ.h4RrrboWE2X0LsuNjvN_QK7eYX2yRxb-C7CRC4VjQxk" for 127.0.0.1 at 2020-03-18 02:12:59 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg0OTc2fQ.h4RrrboWE2X0LsuNjvN_QK7eYX2yRxb-C7CRC4VjQxk"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTI4fQ.oIbyJrK1ZNk0t6zbaKJkN957bGJSQy2XZhd1ks1I9cU" for 127.0.0.1 at 2020-03-18 02:15:28 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTI4fQ.oIbyJrK1ZNk0t6zbaKJkN957bGJSQy2XZhd1ks1I9cU"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTY4fQ.iwhriUx63kybtlLUUxrE5MaPoD4CnPbEYPAZyCdTblE" for 127.0.0.1 at 2020-03-18 02:16:08 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTY4fQ.iwhriUx63kybtlLUUxrE5MaPoD4CnPbEYPAZyCdTblE"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTgzfQ.st07CJ-dNrqkktdC2-WIFZS2CJEKv3-U4B724_4tZsc" for 127.0.0.1 at 2020-03-18 02:16:23 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTgzfQ.st07CJ-dNrqkktdC2-WIFZS2CJEKv3-U4B724_4tZsc"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTk0fQ.uDnr_5MHG0CmsgG3ZJyEo4ECS7mu3ik9YpCfuJrqVz4" for 127.0.0.1 at 2020-03-18 02:16:34 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MTk0fQ.uDnr_5MHG0CmsgG3ZJyEo4ECS7mu3ik9YpCfuJrqVz4"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjIyfQ.anuD5CrhrMLPXVGaRb3zSrnUFzDeYoLXLCnFgwTSsew" for 127.0.0.1 at 2020-03-18 02:17:02 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjIyfQ.anuD5CrhrMLPXVGaRb3zSrnUFzDeYoLXLCnFgwTSsew"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 8ms (Views: 0.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjM0fQ.sCMa98pOOUKypD_GqPlKiP_gKfWV9RI2lzjm7ehNvb8" for 127.0.0.1 at 2020-03-18 02:17:14 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjM0fQ.sCMa98pOOUKypD_GqPlKiP_gKfWV9RI2lzjm7ehNvb8"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjYxfQ.Qr8i-PhSXVt-_x-rFpuoBx1Y29vk-CVoor2bCOZv-uw" for 127.0.0.1 at 2020-03-18 02:17:41 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwiZXhwIjoxNTg0NDg1MjYxfQ.Qr8i-PhSXVt-_x-rFpuoBx1Y29vk-CVoor2bCOZv-uw"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:18:41 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcGFsaSAiLCJsYXN0X25hbWUiOiJMZWt1cndhbGUiLCJtb2JpbGVfbnVtYmVyIjoiOTg3NjU2NzU1NiIsInVzZXJuYW1lIjoiZHBsZWt1cndhbGUiLCJlbWFpbCI6ImRwbGVrdXJ3YWxlQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMTIzIiwicGFzc3dvcmRfY29uZmlybWF0aW9uIjoiMTIzIiwiZXhwIjoxNTg0NDg1MzIxfQ.nRbe-BQlbFu4VdWzy9SVfMYQ1FpW2t8EAzqAhLbwb2I"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dplekurwale"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dplekurwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "mobile_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Deepali "], ["last_name", "Lekurwale"], ["username", "dplekurwale"], ["email", "dplekurwale@gmail.com"], ["mobile_number", "9876567556"], ["password_digest", "$2a$12$vxe3/BQWMRIz9O4y9PEPceDLCN91UOM7vqzUhvyHoJqOEW.sSJWdO"], ["created_at", "2020-03-17 20:48:41.408975"], ["updated_at", "2020-03-17 20:48:41.408975"]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (67.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 407ms (Views: 0.7ms | ActiveRecord: 67.9ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:18:50 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRwbGVrdXJ3YWxlIiwicGFzc3dvcmQiOiIxMjMiLCJleHAiOjE1ODQ0ODUzMzB9._B5ubwO8GL9WTmghMgARZjvcoukHHsszStashh9wrgU"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dplekurwale"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 337ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0NDg1MzMwfQ.Khjoyh7-fkVNC9d8haTZWOnUTKKds84CU2XirLZL_RM" for 127.0.0.1 at 2020-03-18 02:18:50 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MywiZXhwIjoxNTg0NDg1MzMwfQ.Khjoyh7-fkVNC9d8haTZWOnUTKKds84CU2XirLZL_RM"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:19:32 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6Ikxla3Vyd2FsZSIsIm1vYmlsZV9udW1iZXIiOiI5ODc2NTY3NTU2IiwidXNlcm5hbWUiOiJkcGxla3Vyd2FsZSIsImVtYWlsIjoiZHBsZWt1cndhbGVAZ21haWwuY29tIiwicGFzc3dvcmQiOiIxMjMiLCJwYXNzd29yZF9jb25maXJtYXRpb24iOiIxMjMiLCJleHAiOjE1ODQ0ODUzNzJ9.HrhoGJRqTxNVkH2tII7TcLLAedLxC_sYJEL6JHzWM9w"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dplekurwale"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dplekurwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 332ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:21:17 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiOTg3NjU2NzU1NiIsInVzZXJuYW1lIjoiZHBsZWt1cndhbGUiLCJlbWFpbCI6ImRwbGVrdXJ3YWxlQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0ODU0Nzd9.dg_J71omSREoFFtNtBFmEiYBWMVfdSpCpoCIC9rYhQI"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dplekurwale"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dplekurwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 322ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:22:15 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6IkwiLCJtb2JpbGVfbnVtYmVyIjoiOTg3NjU2NzU1NiIsInVzZXJuYW1lIjoiZHBsZWt1cndhbGUiLCJlbWFpbCI6ImRwbGVrdXJ3YWxlQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiIiwicGFzc3dvcmRfY29uZmlybWF0aW9uIjoiIiwiZXhwIjoxNTg0NDg1NTM1fQ.YSA2Sn_OgEGhuZAMWNT5NGWi_3eoxqlyMO00vCKG25U"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "dplekurwale"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "dplekurwale@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:25:28 +0530
+  
+SyntaxError (/home/deepali/deepali/documents/projects/customer_api/app/controllers/users_controller.rb:24: syntax error, unexpected '}', expecting =>
+...encode({message: {user.as_json}), status_code: 200}
+...                              ^):
+  
+app/controllers/users_controller.rb:24: syntax error, unexpected '}', expecting =>
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:26:45 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6Ikxla3Vyd2FsZSIsIm1vYmlsZV9udW1iZXIiOiI5ODc2NTY3NTU2IiwidXNlcm5hbWUiOiJkZWVwMSIsImVtYWlsIjoiZEBnLmNvbSIsInBhc3N3b3JkIjoiMSIsInBhc3N3b3JkX2NvbmZpcm1hdGlvbiI6IjEiLCJleHAiOjE1ODQ0ODU4MDV9.pJBldS2A8q040vc6OU3BH-tmzTfJ8ZiFWWwnTlYuf9k"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep1"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 343ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/user" for 127.0.0.1 at 2020-03-18 02:26:59 +0530
+Processing by UsersController#create as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJmaXJzdF9uYW1lIjoiRGVlcCIsImxhc3RfbmFtZSI6Ikxla3Vyd2FsZSIsIm1vYmlsZV9udW1iZXIiOiI5ODc2NTY3NTU2IiwidXNlcm5hbWUiOiJkZWVwMTEiLCJlbWFpbCI6ImQxQGcuY29tIiwicGFzc3dvcmQiOiIxIiwicGFzc3dvcmRfY29uZmlybWF0aW9uIjoiMSIsImV4cCI6MTU4NDQ4NTgxOX0.oGnq9yjS9gmSRNu5neSreWgNT2kX_QY0-Mj-3qW6wAM"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep11"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "d1@g.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "username", "email", "mobile_number", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Deep"], ["last_name", "Lekurwale"], ["username", "deep11"], ["email", "d1@g.com"], ["mobile_number", "9876567556"], ["password_digest", "$2a$12$dtiGSiX.BVQmpC6L.QAYkunG/7k1OimNN/3t37m63hL9a5YqiX1DC"], ["created_at", "2020-03-17 20:56:59.633146"], ["updated_at", "2020-03-17 20:56:59.633146"]]
+  ↳ app/controllers/users_controller.rb:5
+  [1m[35m (82.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:5
+Completed 200 OK in 414ms (Views: 0.4ms | ActiveRecord: 83.9ms)
+
+
+Started POST "/user/authenticate_user" for 127.0.0.1 at 2020-03-18 02:27:08 +0530
+Processing by UsersController#authenticate_user as JSON
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImRlZXAxMSIsInBhc3N3b3JkIjoiMSIsImV4cCI6MTU4NDQ4NTgyOH0.CtUxTOHTuGu9QYV-clQBF9Vp8Ackv8Ss2wpNOBZL3FM"}
+Can't verify CSRF token authenticity.
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "deep11"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+Unpermitted parameter: :exp
+Completed 200 OK in 346ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/user?user=eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwiZXhwIjoxNTg0NDg1ODI4fQ.UagzoAWvbAUDG4_jzZx-RCtX8OHWJY20BEwhuZem-Xo" for 127.0.0.1 at 2020-03-18 02:27:08 +0530
+Processing by UsersController#show as */*
+  Parameters: {"user"=>"eyJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwiZXhwIjoxNTg0NDg1ODI4fQ.UagzoAWvbAUDG4_jzZx-RCtX8OHWJY20BEwhuZem-Xo"}
+Unpermitted parameter: :exp
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
